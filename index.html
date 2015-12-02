@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>MPN</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="./dist/css/swiper-3.2.5.min.css">
+    <link rel="stylesheet" href="./dist/css/style.css">
+</head>
+<body>
+    <!-- Nav -->
+    <div class="nav">
+        <div class="logo">
+            <img src="./dist/img/logo.png" alt="">
+        </div>
+        <ul>
+            <li class="active" data-index="0">首页</li>
+            <li data-index="1">MPN优势</li>
+            <li data-index="2">MPN与VPN对比</li>
+            <li data-index="3">客户反馈</li>
+            <li data-index="4">合作伙伴</li>
+            <li data-index="5">关于我们</li>
+            <li data-index="6">联系我们</li>
+        </ul>
+    </div>
+    <!-- Swiper -->
+    <div class="swiper-container swiper-container-v">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            <div class="swiper-slide">
+                <div class="swiper-container swiper-container-h">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">Vertical Slide 1</div>
+                        <div class="swiper-slide">Vertical Slide 2</div>
+                        <div class="swiper-slide">Vertical Slide 3</div>
+                        <div class="swiper-slide">Vertical Slide 4</div>
+                        <div class="swiper-slide">Vertical Slide 5</div>
+                    </div>
+                    <div class="swiper-pagination swiper-pagination-h"></div>
+                </div>
+            </div>
+            <div class="swiper-slide">Slide 5</div>
+            <div class="swiper-slide">Slide 6</div>
+            <div class="swiper-slide">Slide 7</div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination swiper-pagination-v"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="./dist/js/jquery.min.js"></script>
+    <script src="./dist/js/swiper-3.2.5.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+    //初始化垂直swiper
+    var swiperV = new Swiper('.swiper-container-v', {
+        pagination: '.swiper-pagination-v',
+        paginationClickable: true,
+        direction: 'vertical',
+        mousewheelControl: true,
+        onSlideChangeStart: function(swiper) {
+            mousewheelindex = swiper.activeIndex;
+            $(".nav").find('li').each(function(index, el) {
+                if (parseInt($(this).attr('data-index')) == swiper.activeIndex) {
+                    $(this).addClass('active').siblings().removeClass('active');
+                }
+            });
+        }
+    });
+    //初始化第一张
+    var sectionid=0;
+    swiperV.slideTo(parseInt(sectionid));
+    //点击菜单跳转
+    $(".nav").on('click', "li", function(event) {
+        swiperV.slideTo(parseInt($(this).attr('data-index')));
+    });
+    //初始化水平swiper
+    var swiperH = new Swiper('.swiper-container-h', {
+        pagination: '.swiper-pagination-h',
+        paginationClickable: true,
+        mousewheelControl: true
+    });
+    </script>
+</body>
+</html>
