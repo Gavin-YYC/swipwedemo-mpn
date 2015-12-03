@@ -17,26 +17,18 @@ body {
 .swiper-container {
     width: 100%;
     height: 100%;
+
 }
 .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
+    background-attachment: fixed;
+    background: url(../img/bg1.jpg);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
 }
+
+/**
+ *  nav
+ */
 .nav {
 	width: 100%;
 	height: 80px;
@@ -72,4 +64,165 @@ body {
 .nav ul li.active{
 	background: #2c3147;
 	color: #3cab4c;
+}
+
+/**
+ *  container
+ */
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+.container2{
+    margin-top: 155px;
+}
+.container2 h1{
+    width: 1001px;
+    margin:0 auto;
+    margin-bottom: 50px;
+    color: #fff;
+}
+.container2 table{
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+.container2 table tr{
+    text-align: center;
+    height: 38px;
+}
+.container2 table tr:nth-child(1) th{
+    color: #fff;
+    font-weight: normal;
+}
+.container2 table tr:nth-child(1) th:nth-child(1){
+    background: #368f42 !important;
+}
+.container2 table tr:nth-child(1) th:nth-child(2n+1){
+    background: #77be33;
+}
+.container2 table tr td:nth-child(1){
+    color: #fff;
+}
+.container2 table tr td:nth-child(2),.container2 table tr td:nth-child(4){
+    color: #b2b2b2;
+}
+.container2 table tr td:nth-child(3){
+    color: #31ae43;
+}
+.container2 table tr:nth-child(2n+1){
+    border: 1px solid #368f42;
+}
+.container2 table tr:nth-child(2n+1):hover{
+    border-color: #77be33;
+}
+.container2 table tr:nth-child(1){
+    border: none;
+}
+.container2 table tr td{
+    width: 250px;
+}
+.container2 table tr td div.a{
+    width: 100%;
+    height: 38px;
+    line-height: 38px;
+    background: #368f42;
+}
+.container2 table tr td div.a1{
+    margin: 3px 0;
+}
+.container2 table tr th div.a3{
+    margin-right: 3px;
+    height: 38px;
+    line-height: 38px;
+    background: #8c8c8c;
+}
+.container2 table tr th div.a4{
+    margin-left: 3px;
+    height: 38px;
+    line-height: 38px;
+    background: #8c8c8c;
+}
+
+/**
+ *  优势
+ */
+.advantage,.partners,.aboutus,.linkus{
+    width: 1001px;
+    margin: 0 auto;
+}
+.advantage .adg{
+    width: 460px;
+    height: 278px;
+    background: rgba(60,171,75,.8);
+    float: left;
+    text-align: center;
+    line-height: 278px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    position: relative;
+    font-size: 18px;
+    color: #fff;
+}
+.advantage .adg .content{
+    height: 32px;
+    overflow: hidden;
+    background: #ccc;
+    position: absolute;
+    bottom: -200px;
+    left: 0;
+    opacity: 0;
+    background: #2d3147;
+    line-height: 20px;
+    text-align: left;
+    color: #999;
+    font-size: 14px;
+    padding: 36px;
+}
+.advantage .adg:hover .content{
+    bottom: 0;
+    opacity: 1;
+}
+
+
+/**
+ *  联系我们
+ */
+.linkus .left,.linkus .right{
+    width: 50%;
+    float: left;
+}
+.linkus .left h1,.linkus .right h1{
+    margin-bottom: 20px;
+}
+.linkus .left input{
+    display: block;
+    background: rgba(238,238,238,.4);
+    height: 44px;
+    border: 1px solid #646364;
+    border-radius: 1px;
+    width: 400px;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 16px;
+    padding-left: 13px;
+    font-family: "微软雅黑", "Microsoft YaHei", Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+.linkus .left button{
+    width: 413px;
+    height: 44px;
+    background-color: #3cab4b;
+    line-height: 44px;
+    color: #fff;
+    text-align: center;
+    border: none;
+    font-size: 16px;
+}
+.linkus .right .p1{
+    font-size: 16px;
+    color: #fff;
+}
+.linkus .right .p2{
+    font-size: 16px;
+    color: #999999;
+    margin-bottom: 60px;
 }
