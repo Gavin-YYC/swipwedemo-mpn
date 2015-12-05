@@ -14,8 +14,8 @@
 <body>
     <!-- Nav -->
     <div class="nav">
-        <div class="logo">
-            <a href=""><img src="./dist/img/logo.png" alt=""></a>
+        <div class="logo animated bounceInLeft">
+            <a href="#"><img src="./dist/img/logo.png" alt=""></a>
         </div>
         <ul>
             <li class="active" data-index="0">首页</li>
@@ -33,11 +33,11 @@
             <div class="swiper-slide">
                 <div class="container container2">
                     <div class="index">
-                        <div class="left">
+                        <div class="left animated bounceInLeft">
                             <p class="big">MPN —— 为跨境电商保驾护航</p>
                             <p class="small">让您像访问百度一样访问Google/Facebook</p>
                         </div>
-                        <div class="right">
+                        <div class="right animated bounceInRight">
                             <ul>
                                 <li>干线网络，硬件加速：舍弃软件拨号和浏览器拨号</li>
                                 <li>快速稳定，永不掉线：不再反复登录设置</li>
@@ -45,7 +45,7 @@
                                 <li>无需更换IP，更适合Amazon--IP地址固定</li>
                                 <li>Wifi手机随便上--满足您移动办公需求</li>
                             </ul>
-                            <a href="#">立即申请试用</a>
+                            <a href="#" class="animated bounceInDown">立即申请试用</a>
                         </div>
                     </div>
                 </div>
@@ -312,6 +312,11 @@
         mousewheelControl: true,
         onSlideChangeStart: function(swiper) {
             mousewheelindex = swiper.activeIndex;
+            if (mousewheelindex == 1) {
+                $(".adg").addClass('animated flipInY');
+            }else{
+                $(".adg").removeClass('animated flipInY');
+            }
             $(".nav").find('li').each(function(index, el) {
                 if (parseInt($(this).attr('data-index')) == swiper.activeIndex) {
                     $(this).addClass('active').siblings().removeClass('active');
