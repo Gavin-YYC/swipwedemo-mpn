@@ -3,6 +3,7 @@
         pagination: '.swiper-pagination-v',
         paginationClickable: true,
         direction: 'vertical',
+        keyboardControl: true,
         mousewheelControl: true,
         onSlideChangeStart: function(swiper) {
             mousewheelindex = swiper.activeIndex;
