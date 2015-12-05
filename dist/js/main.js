@@ -8,8 +8,6 @@
             mousewheelindex = swiper.activeIndex;
             if (mousewheelindex == 1) {
                 $(".adg").addClass('animated flipInY');
-            }else{
-                $(".adg").removeClass('animated flipInY');
             }
             $(".nav").find('li').each(function(index, el) {
                 if (parseInt($(this).attr('data-index')) == swiper.activeIndex) {
